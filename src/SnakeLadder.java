@@ -8,12 +8,14 @@ public class SnakeLadder{
         int max_position = 100;
         int Snake_Array[]={6,12,26,35,42,67,88,92};
         int Ladder_Array[]={3,15,36,49,55,77,82,90};
+        int counter=0;
 
         System.out.println("Welcome to Snake and Ladder Game!");
         System.out.println("Starting Position of the Player = 0");
 
         for(current_position=1;current_position < 100;current_position++) {
             diceRoll = (int) ((Math.random() * 6) );
+            counter++;
             System.out.println("Dice Number :" + diceRoll);
 
             current_position = current_position +diceRoll;
@@ -121,7 +123,6 @@ public class SnakeLadder{
                 current_position -= diceRoll;
                 System.out.println("YOU CAN'T JUMP, YOU MUST LAND ON A 100.");
             }
-
-        }
+        }System.out.println("The number of times the dice roll is :"+counter);
     }
 }
